@@ -4,4 +4,5 @@ CREATE TABLE RECIPIE (
     BESCHREIBUNG   VARCHAR(255),
     PRIMARY KEY (REZEPTID),
 );
+/* Ich mag nimmer */
 
