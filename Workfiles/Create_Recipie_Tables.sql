@@ -10,6 +10,16 @@ CREATE TABLE RECIPIE (
     PRIMARY KEY (REZEPTID),
 );
 
+--Zwischentabelle für die Zutaten eines Rezepts
+Create Table ZUTATENZUWEISUNG (
+    REZEPTID       INTEGER NOT NULL,
+    ZUTATENNR      INTEGER NOT NULL,
+    MENGE          INTEGER,
+    PRIMARY KEY (REZEPTID, ZUTATENNR),
+    FOREIGN KEY (REZEPTID) REFERENCES RECIPIE (REZEPTID),
+    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
+    /* Kann falsch sein, ich hab einfach Copilot schreiben lassen LMAO */
+);
 
 /* Create Beschraenkungstable */
 CREATE TABLE BESCHRAENKUNGEN (
@@ -18,7 +28,7 @@ CREATE TABLE BESCHRAENKUNGEN (
     PRIMARY KEY (BESCHRAENKUNGSID),
 );
 
--- ########################################### Fill Tables with Content ###########################################
+-- ########################################### Fill Tables with dummy Content ###########################################
 
 /* Create Test Items */
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
