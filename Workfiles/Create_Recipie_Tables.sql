@@ -1,3 +1,6 @@
+-- ########################################### Create new Tables ###########################################
+
+
 CREATE TABLE RECIPIE (
     REZEPTID       INTEGER NOT NULL,
     REZEPTNAME     VARCHAR(50),
@@ -14,6 +17,7 @@ CREATE TABLE BESCHRAENKUNGEN (
     PRIMARY KEY (BESCHRAENKUNGSID),
 );
 
+-- ########################################### Fill Tables with Content ###########################################
 
 /* Create Test Items */
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
