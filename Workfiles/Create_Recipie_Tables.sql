@@ -16,4 +16,9 @@ CREATE TABLE BESCHRAENKUNGEN (
 
 
 /* Create Test Items */
-INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (1, 'DUmmy Rezept', 'Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce. (Nicht generiert durch Copilot, ich schwör)', 'Die Spaghetti in Salzwasser kochen. In einer Pfanne Zwiebeln und Knoblauch anbraten, dann das Hackfleisch hinzufügen und braten. Tomatensauce hinzufügen und köcheln lassen. Spaghetti abgießen und mit der Sauce vermengen.');
+INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
+    1, 
+    'DUmmy Rezept', 
+    'Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce. (Nicht generiert durch Copilot, ich schwör)', 
+    'Die Spaghetti in Salzwasser kochen. In einer Pfanne Zwiebeln und Knoblauch anbraten, dann das Hackfleisch hinzufügen und braten. Tomatensauce hinzufügen und köcheln lassen. Spaghetti abgießen und mit der Sauce vermengen.'
+);
