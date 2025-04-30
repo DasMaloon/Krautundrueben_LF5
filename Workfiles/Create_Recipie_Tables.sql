@@ -1,6 +1,7 @@
+USE db967aaa55; /* Select current database */
 -- ########################################### Create new Tables ###########################################
 
-
+/* Create Rezepttabelle */
 CREATE TABLE RECIPIE (
     REZEPTID       INTEGER NOT NULL,
     REZEPTNAME     VARCHAR(50),
@@ -8,7 +9,7 @@ CREATE TABLE RECIPIE (
     ZUBEREITUNG    TEXT(),
     PRIMARY KEY (REZEPTID),
 );
-/* Ich mag nimmer */
+
 
 /* Create Beschraenkungstable */
 CREATE TABLE BESCHRAENKUNGEN (
