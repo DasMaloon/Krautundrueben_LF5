@@ -23,6 +23,7 @@ Create Table ZUTATENZUWEISUNG (
     FOREIGN KEY (REZEPTID) REFERENCES RECIPIE (REZEPTID),
     FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
     /* Kann falsch sein, Ich bin mir nicht sicher */
+     /* 100% RICHTIG*/
 );
 
 /* Create Beschraenkungstable */
@@ -31,6 +32,10 @@ CREATE TABLE BESCHRAENKUNGEN (
     BESCHRAENKUNGSNAME     VARCHAR(50),
     PRIMARY KEY (BESCHRAENKUNGSID),
 );
+
+
+
+
 
 -- ########################################### Fill Tables with dummy Content ###########################################
 
