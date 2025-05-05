@@ -23,6 +23,7 @@ Create Table ZUTATENZUWEISUNG (
     FOREIGN KEY (REZEPTID) REFERENCES RECIPIE (REZEPTID),
     FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
     /* Kann falsch sein, Ich bin mir nicht sicher */
+     /* 100% RICHTIG*/
 );
 
 /* Create Beschraenkungstable */
@@ -30,6 +31,18 @@ CREATE TABLE BESCHRAENKUNGEN (
     BESCHRAENKUNGSID       INTEGER NOT NULL,
     BESCHRAENKUNGSNAME     VARCHAR(50),
     PRIMARY KEY (BESCHRAENKUNGSID),
+);
+
+--Zwischentabelle für die die Beschraenkungen der einzelnen Zutaten
+Create Table ZWISCHENTABELLEZUTATBESCHRAENKUNG (
+    BESCHRAENKUNGSID       INTEGER NOT NULL,
+    ZUTATENNR              INTEGER NOT NULL,
+  
+
+    PRIMARY KEY (BESCHRAENKUNGSID, ZUTATENNR), /* Das ist wahrscheinlich falsch */
+    FOREIGN KEY (RBESCHRAENKUNGSID) REFERENCES BESCHRAENKUNGEN (BESCHRAENKUNGSID),
+    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
+
 );
 
 -- ########################################### Fill Tables with dummy Content ###########################################
