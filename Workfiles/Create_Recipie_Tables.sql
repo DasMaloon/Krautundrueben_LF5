@@ -33,9 +33,17 @@ CREATE TABLE BESCHRAENKUNGEN (
     PRIMARY KEY (BESCHRAENKUNGSID),
 );
 
+--Zwischentabelle für die die Beschraenkungen der einzelnen Zutaten
+Create Table ZWISCHENTABELLEZUTATBESCHRAENKUNG (
+    BESCHRAENKUNGSID       INTEGER NOT NULL,
+    ZUTATENNR              INTEGER NOT NULL,
+  
 
+    PRIMARY KEY (BESCHRAENKUNGSID, ZUTATENNR), /* Das ist wahrscheinlich falsch */
+    FOREIGN KEY (RBESCHRAENKUNGSID) REFERENCES BESCHRAENKUNGEN (BESCHRAENKUNGSID),
+    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
 
-
+);
 
 -- ########################################### Fill Tables with dummy Content ###########################################
 
