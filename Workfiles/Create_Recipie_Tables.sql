@@ -10,7 +10,7 @@ CREATE TABLE RECIPIE (
     ZUBEREITUNG    TEXT(),
     PRIMARY KEY (REZEPTID),
     FOREIGN KEY (ZUTATENID) REFERENCES ZUTAT (ZUTATENNR)
-    /* Kann falsch sein, */
+    /* Kann falsch sein, geht halt nicht */
 );
 
 --Zwischentabelle für die Zutaten eines Rezepts
@@ -30,7 +30,7 @@ Create Table ZUTATENZUWEISUNG (
 CREATE TABLE BESCHRAENKUNGEN (
     BESCHRAENKUNGSID       INTEGER NOT NULL,
     BESCHRAENKUNGSNAME     VARCHAR(50),
-    PRIMARY KEY (BESCHRAENKUNGSID),
+    PRIMARY KEY (BESCHRAENKUNGSID)
 );
 
 --Zwischentabelle für die die Beschraenkungen der einzelnen Zutaten
