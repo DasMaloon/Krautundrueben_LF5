@@ -36,6 +36,18 @@ CREATE TABLE BESCHRAENKUNGEN (
 
 /* Create Test Items */
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
+    0, 
+    'Dummy Rezept', 
+    'Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce. (Nicht generiert durch Copilot, ich schwör)', 
+    
+    
+);	
+
+
+
+
+
+INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     1, 
     'DUmmy Rezept', 
     'Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce. (Nicht generiert durch Copilot, ich schwör)', 
