@@ -68,7 +68,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     R1,
     "Thaicurry mit Hähnchen",
-    "Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce.",
+    "Aromatisches Curry mit zart mariniertem Hähnchen, knackigem Gemüse und cremiger Kokosmilch – schnell zubereitet und perfekt zu Reis..",
     "Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren.
     Im Wok oder in der Pfanne gut anbraten. Herausnehmen.
     Gemischtes Gemüse und Bambussprossen waschen und sehr fein schneiden, ebenfalls anbraten, dann herausnehmen. 
@@ -80,7 +80,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     R2,
     "Kartoffelsuppe",
-    "Eine einfache und leckere Kartoffelsuppe mit Würstchen.",
+    "Eine einfache und leckere Kartoffelsuppe.",
     "Kartoffeln und Karotte schälen und in grobe Würfel schneiden. Zwiebel würfeln. Lauch in Ringe schneiden.
     Zwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen. 
     Die gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen.
