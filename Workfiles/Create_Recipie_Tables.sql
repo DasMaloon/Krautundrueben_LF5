@@ -26,6 +26,22 @@ Create Table ZUTATENZUWEISUNG (
      /* 100% RICHTIG*/
 );
 
+/* Create Kategorietabelle */
+CREATE TABLE ERNAEHRUNGSKATEGORIEN (
+    KATEGORIEID     INTEGER NOT NULL,
+    KATEGORIENAME   VARCHAR(50),
+    PRIMARY KEY (KATEGORIEID),
+);
+
+--Zwischentabelle für die Kategorien eines Rezepts
+Create Table KATEGORIEZUWEISUNG (
+    REZEPTID        INTEGER NOT NULL,
+    KATEGORIEID     INTEGER NOT NULL,
+
+    PRIMARY KEY ()
+
+)
+
 /* Create Beschraenkungstable */
 CREATE TABLE BESCHRAENKUNGEN (
     BESCHRAENKUNGSID       INTEGER NOT NULL,
