@@ -26,6 +26,44 @@ Create Table ZUTATENZUWEISUNG (
      /* 100% RICHTIG*/
 );
 
+<<<<<<< HEAD
+=======
+/* Create Kategorietabelle */
+CREATE TABLE ERNAEHRUNGSKATEGORIEN (
+    KATEGORIEID     INTEGER NOT NULL,
+    KATEGORIENAME   VARCHAR(50),
+    PRIMARY KEY (KATEGORIEID),
+);
+
+--Zwischentabelle für die Kategorien eines Rezepts
+Create Table KATEGORIEZUWEISUNG (
+    REZEPTID        INTEGER NOT NULL,
+    KATEGORIEID     INTEGER NOT NULL,
+
+    PRIMARY KEY ()
+
+)
+
+/* Create Beschraenkungstable */
+CREATE TABLE BESCHRAENKUNGEN (
+    BESCHRAENKUNGSID       INTEGER NOT NULL,
+    BESCHRAENKUNGSNAME     VARCHAR(50),
+    PRIMARY KEY (BESCHRAENKUNGSID),
+);
+
+--Zwischentabelle für die die Beschraenkungen der einzelnen Zutaten
+Create Table ZWISCHENTABELLEZUTATBESCHRAENKUNG (
+    ZUTATENNR              INTEGER NOT NULL,
+    BESCHRAENKUNGSID       INTEGER NOT NULL,
+  
+
+    PRIMARY KEY (BESCHRAENKUNGSID, ZUTATENNR), 
+    FOREIGN KEY (RBESCHRAENKUNGSID) REFERENCES BESCHRAENKUNGEN (BESCHRAENKUNGSID),
+    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
+
+);
+
+>>>>>>> cafe6debc7e11cba3691e175f2cec8243481a264
 -- ########################################### Fill Tables with dummy Content ###########################################
 
 /* Create Test Items */
