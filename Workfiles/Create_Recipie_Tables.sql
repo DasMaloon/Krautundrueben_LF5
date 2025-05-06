@@ -26,8 +26,6 @@ Create Table ZUTATENZUWEISUNG (
      /* 100% RICHTIG*/
 );
 
-<<<<<<< HEAD
-=======
 /* Create Kategorietabelle */
 CREATE TABLE ERNAEHRUNGSKATEGORIEN (
     KATEGORIEID     INTEGER NOT NULL,
@@ -63,7 +61,6 @@ Create Table ZWISCHENTABELLEZUTATBESCHRAENKUNG (
 
 );
 
->>>>>>> cafe6debc7e11cba3691e175f2cec8243481a264
 -- ########################################### Fill Tables with dummy Content ###########################################
 
 /* Create Test Items */
