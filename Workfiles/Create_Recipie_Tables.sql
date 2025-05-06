@@ -26,25 +26,6 @@ Create Table ZUTATENZUWEISUNG (
      /* 100% RICHTIG*/
 );
 
-/* Create Beschraenkungstable */
-CREATE TABLE BESCHRAENKUNGEN (
-    BESCHRAENKUNGSID       INTEGER NOT NULL,
-    BESCHRAENKUNGSNAME     VARCHAR(50),
-    PRIMARY KEY (BESCHRAENKUNGSID)
-);
-
---Zwischentabelle für die die Beschraenkungen der einzelnen Zutaten
-Create Table ZWISCHENTABELLEZUTATBESCHRAENKUNG (
-    ZUTATENNR              INTEGER NOT NULL,
-    BESCHRAENKUNGSID       INTEGER NOT NULL,
-  
-
-    PRIMARY KEY (BESCHRAENKUNGSID, ZUTATENNR), 
-    FOREIGN KEY (RBESCHRAENKUNGSID) REFERENCES BESCHRAENKUNGEN (BESCHRAENKUNGSID),
-    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
-
-);
-
 -- ########################################### Fill Tables with dummy Content ###########################################
 
 /* Create Test Items */
@@ -112,20 +93,10 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 
 
 
-
-
-/* INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    1, 
-    'DUmmy Rezept', 
-    'Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce. (Nicht generiert durch Copilot, ich schwör)', 
-    'Die Spaghetti in Salzwasser kochen. In einer Pfanne Zwiebeln und Knoblauch anbraten, dann das Hackfleisch hinzufügen und braten. Tomatensauce hinzufügen und köcheln lassen. Spaghetti abgießen und mit der Sauce vermengen.'
-); */
-
-
 INSERT INTO ZUTATENZUWEISUNG (REZEPTID, ZUTATENNR, MENGE) VALUES (
     1, 
     1, 
     200
 );
-
+/* Ergibt das überhaupt Sinn? Ich weiß nichtmal mehr, was ich hier machen wollte LMAO */
 COMMIT WORK;
