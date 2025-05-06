@@ -3,7 +3,7 @@ USE db967aaa55; /* Select current database */
 
 /* Create Rezepttabelle */
 CREATE TABLE RECIPIE (
-    REZEPTID       INTEGER NOT NULL,
+    REZEPTID       VARCHAR(50),
     REZEPTNAME     VARCHAR(50),
     BESCHREIBUNG   VARCHAR(255),
     ZUTATENID      INTEGER,
@@ -28,15 +28,15 @@ Create Table ZUTATENZUWEISUNG (
 
 /* Create Kategorietabelle */
 CREATE TABLE ERNAEHRUNGSKATEGORIEN (
-    KATEGORIEID     INTEGER NOT NULL,
+    KATEGORIEID     VARCHAR(50),
     KATEGORIENAME   VARCHAR(50),
     PRIMARY KEY (KATEGORIEID),
 );
 
 --Zwischentabelle für die Kategorien eines Rezepts
 Create Table KATEGORIEZUWEISUNG (
-    REZEPTID        INTEGER NOT NULL,
-    KATEGORIEID     INTEGER NOT NULL,
+    REZEPTID        VARCHAR(50),
+    KATEGORIEID     VARCHAR(50),
 
     PRIMARY KEY (REZEPTID),
     FOREIGN KEY (KATEGORIEID), REFERENCES ERNAEHRUNGSKATEGORIEN (KATEGORIEID)
@@ -47,7 +47,7 @@ Create Table KATEGORIEZUWEISUNG (
 
 /* Create Test Items */
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    0,
+    R0,
     "Lachslasagne",
     "Eine köstliche Lasagne mit Lachs und Spinat. Perfekt für ein schnelles Abendessen.",
     "Den Spinat 5 min vorgaren, auspressen bis er ganz trocken ist und würzen.
@@ -66,7 +66,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 );	
 
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    1,
+    R1,
     "Thaicurry mit Hähnchen",
     "Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce.",
     "Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren.
@@ -78,7 +78,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     /* Allergene: Gluten */
 );
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    2,
+    R2,
     "Kartoffelsuppe",
     "Eine einfache und leckere Kartoffelsuppe mit Würstchen.",
     "Kartoffeln und Karotte schälen und in grobe Würfel schneiden. Zwiebel würfeln. Lauch in Ringe schneiden.
@@ -89,7 +89,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     /* Allergene: Stärke, Karotte */
 );
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    3,
+    R3,
     "Milchreis mit Apfelmus",
     "Ein klassisches Dessert, das einfach zuzubereiten ist.",
     "In einem großen Topf die Butter schmelzen, anschließend den Rundkornreis kurz in der Butter anschwitzen. Nun die zimmerwarme Vollmilch sowie 4 EL Zucker hinzugeben. Vanillezucker hinzugeben. Alles unter vorsichtigem Rühren mit dem Holzkochlöffel einmal aufkochen lassen und dabei aufpassen, dass sich nichts am Topfboden ansetzt.
@@ -99,7 +99,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     /* Allergene:  */
 ); 
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
-    4,
+    R4,
     "Sommerlicher Couscous-Salat",
     "Irgendwie ein Salat halt.", /* AENDERN */
     "Couscous in eine Schale geben und mit kochender Gemüsebrühe übergießen. Kurz umrühren, quellen lassen und evtl. Wasser nachgeben. 
