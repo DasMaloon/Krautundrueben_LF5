@@ -109,11 +109,4 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 );
 
 
-
-INSERT INTO ZUTATENZUWEISUNG (REZEPTID, ZUTATENNR, MENGE) VALUES (
-    1, 
-    1, 
-    200
-);
-/* Ergibt das überhaupt Sinn? Ich weiß nichtmal mehr, was ich hier machen wollte LMAO */
 COMMIT WORK;
