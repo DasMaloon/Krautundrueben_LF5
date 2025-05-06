@@ -9,7 +9,7 @@ CREATE TABLE RECIPIE (
     ZUTATENID      INTEGER,
     ZUBEREITUNG    TEXT(),
     PRIMARY KEY (REZEPTID),
-    FOREIGN KEY (ZUTATENID) REFERENCES ZUTAT (ZUTATENNR)
+    FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
     /* Kann falsch sein, geht halt nicht */
 );
 
@@ -24,6 +24,23 @@ Create Table ZUTATENZUWEISUNG (
     FOREIGN KEY (ZUTATENNR) REFERENCES ZUTAT (ZUTATENNR)
     /* Kann falsch sein, Ich bin mir nicht sicher */
      /* 100% RICHTIG*/
+);
+
+/* Create Kategorietabelle */
+CREATE TABLE ERNAEHRUNGSKATEGORIEN (
+    KATEGORIEID     INTEGER NOT NULL,
+    KATEGORIENAME   VARCHAR(50),
+    PRIMARY KEY (KATEGORIEID),
+);
+
+--Zwischentabelle für die Kategorien eines Rezepts
+Create Table KATEGORIEZUWEISUNG (
+    REZEPTID        INTEGER NOT NULL,
+    KATEGORIEID     INTEGER NOT NULL,
+
+    PRIMARY KEY (REZEPTID),
+    FOREIGN KEY (KATEGORIEID), REFERENCES ERNAEHRUNGSKATEGORIEN (KATEGORIEID)
+/* Magucken */
 );
 
 -- ########################################### Fill Tables with dummy Content ###########################################
