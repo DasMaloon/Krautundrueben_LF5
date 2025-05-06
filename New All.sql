@@ -86,7 +86,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     R1,
     "Thaicurry mit Hähnchen",
-    "Ein klassisches italienisches Gericht mit Hackfleisch und Tomatensauce.",
+    "Aromatisches Curry mit zart mariniertem Hähnchen, knackigem Gemüse und cremiger Kokosmilch – schnell zubereitet und perfekt zu Reis",
     "Die Hühnerbrust in Streifen schneiden und in einer Marinade aus Sojasauce, Pfeffer und Zucker ca. 1 Stunde marinieren.
     Im Wok oder in der Pfanne gut anbraten. Herausnehmen.
     Gemischtes Gemüse und Bambussprossen waschen und sehr fein schneiden, ebenfalls anbraten, dann herausnehmen. 
@@ -98,7 +98,7 @@ INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
 INSERT INTO RECIPIE (REZEPTID, REZEPTNAME, BESCHREIBUNG, ZUBEREITUNG) VALUES (
     R2,
     "Kartoffelsuppe",
-    "Eine einfache und leckere Kartoffelsuppe mit Würstchen.",
+    "Eine einfache und leckere Kartoffelsuppe mit Würstchen oder Tofu.",
     "Kartoffeln und Karotte schälen und in grobe Würfel schneiden. Zwiebel würfeln. Lauch in Ringe schneiden.
     Zwiebeln in etwas Olivenöl glasig dünsten, Lauch dazugeben. Mit der Gemüsebrühe ablöschen. 
     Die gewürfelten Kartoffeln und Karotte in die Brühe geben. Alles für ca. 20 min köcheln lassen.
@@ -157,3 +157,18 @@ INSERT INTO ZWISCHENTABELLEZUTATBESCHRAENKUNG (ZUTATENNR, BESCHRAENKUNGSID ) VAL
 
 
  COMMIT WORK;
+
+/* Insert Kategorien */
+
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K01, 'Vegan');
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K02, 'Vegetarisch');
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K03, 'Low Carb');
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K04, 'Keto');
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K05, 'High Protein');
+INSERT INTO ERNAEHRUNGSKATEGORIEN (KATEGORIEID, KATEGORIENAME) VALUES (K06, 'Low Fat');
+
+INSERT INTO ZWISCHENKATEGORIEREZEPT (REZEPTID, KATEGORIEID) VALUES (R0, K05);
+INSERT INTO ZWISCHENKATEGORIEREZEPT (REZEPTID, KATEGORIEID) VALUES (R1, K06);
+INSERT INTO ZWISCHENKATEGORIEREZEPT (REZEPTID, KATEGORIEID) VALUES (R2, K01);
+INSERT INTO ZWISCHENKATEGORIEREZEPT (REZEPTID, KATEGORIEID) VALUES (R3, K02);
+INSERT INTO ZWISCHENKATEGORIEREZEPT (REZEPTID, KATEGORIEID) VALUES (R4, K01);
