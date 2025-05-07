@@ -79,9 +79,13 @@ WHERE ZZ.ZUTATENNR IN (
 
 
 /* Auswahl aller Zutaten eines Rezeptes nach Rezeptname */
-/* Geht iwie nicht, keine zet mehr zum debuggen */
-SELECT Z.BEZEICHNUNG, Z.MENGE, Z.EINHEIT
+/* Last minute CHange */
+SELECT
+  Z.BEZEICHNUNG,
+  ZZ.MENGE,
+  Z.EINHEIT
 FROM ZUTAT Z
 JOIN ZUTATENZUWEISUNG ZZ ON Z.ZUTATENNR = ZZ.ZUTATENNR
 JOIN RECIPIE R ON ZZ.REZEPTID = R.REZEPTID
-WHERE R.REZEPTNAME = 'Lachslasagne';
+WHERE R.REZEPTNAME = 'Lachslasagne'
+LIMIT 0, 25;
