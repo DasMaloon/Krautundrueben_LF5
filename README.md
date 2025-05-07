@@ -1,5 +1,4 @@
 # Krautundrueben_LF5
 
-Dies ist ein Fresher Test haher
+SQL-Dateien für Lernfeld 5
 
-Ich hab in den Focus gekaggert 😎 B-) B
