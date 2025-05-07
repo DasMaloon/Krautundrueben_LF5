@@ -1,12 +1,6 @@
 USE db967aaa55; 
 
-/* Auswahl aller Zutaten eines Rezeptes nach Rezeptname */
-/* Klappt nicht, da die Tabelle ZUTATENZUWEISUNG nicht existiert */
-SELECT Z.BEZEICHNUNG, Z.MENGE, Z.EINHEIT
-FROM ZUTAT Z
-JOIN ZUTATENZUWEISUNG ZZ ON Z.ZUTATENNR = ZZ.ZUTATENNR
-JOIN RECIPIE R ON ZZ.REZEPTID = R.REZEPTID
-WHERE R.REZEPTNAME = 'Lachslasagne';
+
 
 /* Auswahl aller Rezepte einer bestimmten Ernährungskategorie */
 SELECT R.REZEPTNAME
@@ -82,3 +76,12 @@ WHERE ZZ.ZUTATENNR IN (
     FROM ZWISCHENTABELLEZUTATBESCHRAENKUNG
     WHERE BESCHRAENKUNGSID = 'B02'
 );
+
+
+/* Auswahl aller Zutaten eines Rezeptes nach Rezeptname */
+/* Geht iwie nicht, keine zet mehr zum debuggen */
+SELECT Z.BEZEICHNUNG, Z.MENGE, Z.EINHEIT
+FROM ZUTAT Z
+JOIN ZUTATENZUWEISUNG ZZ ON Z.ZUTATENNR = ZZ.ZUTATENNR
+JOIN RECIPIE R ON ZZ.REZEPTID = R.REZEPTID
+WHERE R.REZEPTNAME = 'Lachslasagne';
